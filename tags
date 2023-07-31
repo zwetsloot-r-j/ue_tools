@@ -1,0 +1,74 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AMyActor	templates/v4/MyActor.cpp	/^AMyActor::AMyActor()$/;"	f	class:AMyActor
+AMyActor	templates/v4/MyActor.h	/^class PROJECT_NAME_API AMyActor : public AActor$/;"	c
+AMyCharacter	templates/v4/MyCharacter.cpp	/^AMyCharacter::AMyCharacter()$/;"	f	class:AMyCharacter
+AMyCharacter	templates/v4/MyCharacter.h	/^class PROJECT_NAME_API AMyCharacter : public ACharacter$/;"	c
+AMyGameModeBase	templates/v4/MyGameModeBase.h	/^class PROJECT_NAME_API AMyGameModeBase : public AGameModeBase$/;"	c
+AMyGameStateBase	templates/v4/MyGameStateBase.h	/^class PROJECT_NAME_API AMyGameStateBase : public AGameStateBase$/;"	c
+AMyHUD	templates/v4/MyHUD.h	/^class PROJECT_NAME_API AMyHUD : public AHUD$/;"	c
+AMyInheritedClass	templates/v4/MyInheritedClass.h	/^class PROJECT_NAME_API AMyInheritedClass : public AMyBaseClass$/;"	c
+AMyPawn	templates/v4/MyPawn.cpp	/^AMyPawn::AMyPawn()$/;"	f	class:AMyPawn
+AMyPawn	templates/v4/MyPawn.h	/^class PROJECT_NAME_API AMyPawn : public APawn$/;"	c
+AMyPlayerCameraManager	templates/v4/MyPlayerCameraManager.h	/^class PROJECT_NAME_API AMyPlayerCameraManager : public APlayerCameraManager$/;"	c
+AMyPlayerController	templates/v4/MyPlayerController.h	/^class PROJECT_NAME_API AMyPlayerController : public APlayerController$/;"	c
+AMyPlayerState	templates/v4/MyPlayerState.h	/^class PROJECT_NAME_API AMyPlayerState : public APlayerState$/;"	c
+AMyWorldSettings	templates/v4/MyWorldSettings.h	/^class PROJECT_NAME_API AMyWorldSettings : public AWorldSettings$/;"	c
+BeginPlay	templates/v4/MyActor.cpp	/^void AMyActor::BeginPlay()$/;"	f	class:AMyActor
+BeginPlay	templates/v4/MyActorComponent.cpp	/^void UMyActorComponent::BeginPlay()$/;"	f	class:UMyActorComponent
+BeginPlay	templates/v4/MyCharacter.cpp	/^void AMyCharacter::BeginPlay()$/;"	f	class:AMyCharacter
+BeginPlay	templates/v4/MyPawn.cpp	/^void AMyPawn::BeginPlay()$/;"	f	class:AMyPawn
+BeginPlay	templates/v4/MySceneComponent.cpp	/^void UMySceneComponent::BeginPlay()$/;"	f	class:UMySceneComponent
+Construct	templates/v4/SMyCompoundWidget.cpp	/^void SMyCompoundWidget::Construct(const FArguments& InArgs)$/;"	f	class:SMyCompoundWidget
+ExecuteTask	templates/v4/MyBTTaskNode.cpp	/^EBTNodeResult::Type UMyBTTaskNode::ExecuteTask($/;"	f	class:UMyBTTaskNode
+FMySlateStyle	templates/v4/MySlateWidgetStyle.cpp	/^FMySlateStyle::FMySlateStyle()$/;"	f	class:FMySlateStyle
+FMySlateStyle	templates/v4/MySlateWidgetStyle.h	/^struct PROJECT_NAME_API FMySlateStyle : public FSlateWidgetStyle$/;"	s
+GetDefault	templates/v4/MySlateWidgetStyle.cpp	/^const FMySlateStyle& FMySlateStyle::GetDefault()$/;"	f	class:FMySlateStyle
+GetResources	templates/v4/MySlateWidgetStyle.cpp	/^void FMySlateStyle::GetResources(TArray<const FSlateBrush*>& OutBrushes) const$/;"	f	class:FMySlateStyle
+IMyInterface	templates/v4/MyInterface.h	/^class PROJECT_NAME_API IMyInterface$/;"	c
+MyClass	templates/v4/MyClass.cpp	/^MyClass::MyClass()$/;"	f	class:MyClass
+MyClass	templates/v4/MyClass.h	/^class SIDERUNNER_API MyClass$/;"	c
+NativeConstruct	templates/v4/MyUserWidget.cpp	/^void UMyUserWidget::NativeConstruct()$/;"	f	class:UMyUserWidget
+NativePreConstruct	templates/v4/MyUserWidget.cpp	/^void UMyUserWidget::NativePreConstruct()$/;"	f	class:UMyUserWidget
+SLATE_BEGIN_ARGS	templates/v4/SMyCompoundWidget.h	/^	SLATE_BEGIN_ARGS(SMyCompoundWidget)$/;"	f	class:SMyCompoundWidget
+SMyCompoundWidget	templates/v4/SMyCompoundWidget.h	/^class PROJECT_NAME_API SMyCompoundWidget : public SCompoundWidget$/;"	c
+SetupPlayerInputComponent	templates/v4/MyCharacter.cpp	/^void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)$/;"	f	class:AMyCharacter
+SetupPlayerInputComponent	templates/v4/MyPawn.cpp	/^void AMyPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)$/;"	f	class:AMyPawn
+Tick	templates/v4/MyActor.cpp	/^void AMyActor::Tick(float DeltaTime)$/;"	f	class:AMyActor
+Tick	templates/v4/MyCharacter.cpp	/^void AMyCharacter::Tick(float DeltaTime)$/;"	f	class:AMyCharacter
+Tick	templates/v4/MyPawn.cpp	/^void AMyPawn::Tick(float DeltaTime)$/;"	f	class:AMyPawn
+TickComponent	templates/v4/MyActorComponent.cpp	/^void UMyActorComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)$/;"	f	class:UMyActorComponent
+TickComponent	templates/v4/MySceneComponent.cpp	/^void UMySceneComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)$/;"	f	class:UMySceneComponent
+TypeName	templates/v4/MySlateWidgetStyle.h	/^	static const FName TypeName;$/;"	m	struct:FMySlateStyle
+UMyActorComponent	templates/v4/MyActorComponent.cpp	/^UMyActorComponent::UMyActorComponent()$/;"	f	class:UMyActorComponent
+UMyActorComponent	templates/v4/MyActorComponent.h	/^class PROJECT_NAME_API UMyActorComponent : public UActorComponent$/;"	c
+UMyBTTaskNode	templates/v4/MyBTTaskNode.h	/^class PROJECT_NAME_API UMyBTTaskNode : public UBTTaskNode$/;"	c
+UMyBlueprintFunctionLibrary	templates/v4/MyBlueprintFunctionLibrary.h	/^class PROJECT_NAME_API UMyBlueprintFunctionLibrary : public UBlueprintFunctionLibrary$/;"	c
+UMyInterface	templates/v4/MyInterface.h	/^class UMyInterface : public UInterface$/;"	c
+UMySceneComponent	templates/v4/MySceneComponent.cpp	/^UMySceneComponent::UMySceneComponent()$/;"	f	class:UMySceneComponent
+UMySceneComponent	templates/v4/MySceneComponent.h	/^class PROJECT_NAME_API UMySceneComponent : public USceneComponent$/;"	c
+UMySlateWidgetStyle	templates/v4/MySlateWidgetStyle.h	/^class UMySlateWidgetStyle : public USlateWidgetStyleContainerBase$/;"	c
+UMyUserWidget	templates/v4/MyUserWidget.h	/^class PROJECT_NAME_API UMyUserWidget : public UUserWidget$/;"	c
+WidgetStyle	templates/v4/MySlateWidgetStyle.h	/^	FMySlateStyle WidgetStyle;$/;"	m	class:UMySlateWidgetStyle
+override	templates/v4/MyActor.h	/^	virtual void BeginPlay() override;$/;"	m	class:AMyActor
+override	templates/v4/MyActor.h	/^	virtual void Tick(float DeltaTime) override;$/;"	m	class:AMyActor
+override	templates/v4/MyActorComponent.h	/^	virtual void BeginPlay() override;$/;"	m	class:UMyActorComponent
+override	templates/v4/MyActorComponent.h	/^	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;$/;"	m	class:UMyActorComponent
+override	templates/v4/MyBTTaskNode.h	/^	) override;$/;"	m	class:UMyBTTaskNode
+override	templates/v4/MyCharacter.h	/^	virtual void BeginPlay() override;$/;"	m	class:AMyCharacter
+override	templates/v4/MyCharacter.h	/^	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;$/;"	m	class:AMyCharacter
+override	templates/v4/MyCharacter.h	/^	virtual void Tick(float DeltaTime) override;$/;"	m	class:AMyCharacter
+override	templates/v4/MyPawn.h	/^	virtual void BeginPlay() override;$/;"	m	class:AMyPawn
+override	templates/v4/MyPawn.h	/^	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;$/;"	m	class:AMyPawn
+override	templates/v4/MyPawn.h	/^	virtual void Tick(float DeltaTime) override;$/;"	m	class:AMyPawn
+override	templates/v4/MySceneComponent.h	/^	virtual void BeginPlay() override;$/;"	m	class:UMySceneComponent
+override	templates/v4/MySceneComponent.h	/^	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;$/;"	m	class:UMySceneComponent
+override	templates/v4/MySlateWidgetStyle.h	/^	virtual void GetResources(TArray<const FSlateBrush*>& OutBrushes) const override;$/;"	m	struct:FMySlateStyle
+override	templates/v4/MyUserWidget.h	/^	virtual void NativeConstruct() override;$/;"	m	class:UMyUserWidget
+override	templates/v4/MyUserWidget.h	/^	virtual void NativePreConstruct() override;$/;"	m	class:UMyUserWidget
+~FMySlateStyle	templates/v4/MySlateWidgetStyle.cpp	/^FMySlateStyle::~FMySlateStyle()$/;"	f	class:FMySlateStyle
+~MyClass	templates/v4/MyClass.cpp	/^MyClass::~MyClass()$/;"	f	class:MyClass

@@ -33,9 +33,21 @@ defmodule UeTools.Templates do
   def world_settings_h_4, do: unquote(File.read!("templates/v4/MyWorldSettings.h"))
   def s_compound_widget_cpp_4, do: unquote(File.read!("templates/v4/SMyCompoundWidget.cpp"))
   def s_compound_widget_h_4, do: unquote(File.read!("templates/v4/SMyCompoundWidget.h"))
+  def inherited_class_cpp_4, do: unquote(File.read!("templates/v4/MyInheritedClass.cpp"))
+  def inherited_class_h_4, do: unquote(File.read!("templates/v4/MyInheritedClass.h"))
+  def b_t_task_node_cpp_4, do: unquote(File.read!("templates/v4/MyBTTaskNode.cpp"))
+  def b_t_task_node_h_4, do: unquote(File.read!("templates/v4/MyBTTaskNode.h"))
+  def user_widget_cpp_4, do: unquote(File.read!("templates/v4/MyUserWidget.cpp"))
+  def user_widget_h_4, do: unquote(File.read!("templates/v4/MyUserWidget.h"))
 
-  def generate(class_name, class_type, project_file) do
-    {version, _} = Integer.parse(project_file["EngineAssociation"])
+
+  def generate(class_name, class_type, project_file, base_class \\ "") do
+    version = with {version, _} <- Integer.parse(project_file["EngineAssociation"]) do
+                version
+              else
+                _ -> 4
+              end
+
     cpp_file_name = "#{class_name}.cpp"
     h_file_name = "#{class_name}.h"
 
@@ -46,13 +58,13 @@ defmodule UeTools.Templates do
          {:ok, h_template_function} <-
            generate_template_function(class_type, "h", version),
          {:ok, cpp_content} <-
-           generate_content(cpp_template_function, project_name, class_name, class_type),
+           generate_content(cpp_template_function, project_name, class_name, class_type, base_class),
          {:ok, h_content} <-
-           generate_content(h_template_function, project_name, class_name, class_type),
+           generate_content(h_template_function, project_name, class_name, class_type, base_class),
          :ok <-
-           File.write(cpp_file_name, cpp_content),
+           File.write(cpp_path(cpp_file_name), cpp_content),
          :ok <-
-           File.write(h_file_name, h_content)
+           File.write(h_path(h_file_name), h_content)
     do
       msg = """
             generated files:
@@ -68,11 +80,18 @@ defmodule UeTools.Templates do
     end
   end
 
-  defp generate_content(generate_template_function, project_name, class_name, class_type) do
+  defp generate_content(
+    generate_template_function,
+    project_name,
+    class_name,
+    class_type,
+    base_class
+  ) do
     with {:ok, template} <- generate_template(generate_template_function) do
       template = template
                  |> String.replace(~r/PROJECT_NAME/, String.upcase(project_name))
                  |> String.replace("My#{Macro.camelize(class_type)}", class_name)
+                 |> String.replace("MyBaseClass", Macro.camelize(base_class))
 
       {:ok, template}
     else
@@ -97,6 +116,28 @@ defmodule UeTools.Templates do
       {:ok, apply(__MODULE__, generate_template_function, [])}
     rescue
       _ -> {:error, :invalid_template}
+    end
+  end
+
+  defp cpp_path(file_name) do
+    with {:ok, cwd} <- File.cwd(),
+         dir <- String.replace(cwd, ~r/\/Public\//, "\/Private\/"),
+         true <- File.exists?(dir)
+    do
+      "#{dir}/#{file_name}"
+    else
+      _ -> file_name
+    end
+  end
+
+  defp h_path(file_name) do
+    with {:ok, cwd} <- File.cwd(),
+         dir <- String.replace(cwd, ~r/\/Private\//, "\/Public\/"),
+         true <- File.exists?(dir)
+    do
+      "#{dir}/#{file_name}"
+    else
+      _ -> file_name
     end
   end
 end

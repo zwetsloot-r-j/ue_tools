@@ -5,10 +5,22 @@ defmodule UeTools.CLI do
     |> out()
   end
 
+  def main(["inh", base_name, class_name]) do
+    UeTools.New.inherit(base_name, class_name)
+    |> out()
+  end
+
+  def main(["impl", class_name]) do
+    UeTools.Impl.impl(class_name)
+    |> out()
+  end
+
   def main(_) do
     """
     Usage:
       new {class_type} {class_name}
+      inh {base_name} {class_name}
+      impl {class_name}
     """
     |> out()
   end
